@@ -1,32 +1,67 @@
 #include <iostream>
 #include <string>
-#include <stdlib.h>
-#include <sstream>
+#include<string.h>
 using namespace std;
+/*
+|---------------------------|
+|---------1CM12-------------|
+|---------------------------|
+Fundamentos de programacion |
+|---------------------------|
+Bryan Garcia Vega-----------|
+|---------------------------|
+Jose Emilio Hernandez Huerta|
+|---------------------------|
+Denisse Gonzales Rodriguez  |
+|---------------------------|
+*/
+
+bool isNumber(string s)
+{
+    for (int i = 0; i < s.length(); i++)
+        if (isdigit(s[i]) == false)
+            return false;
+ 
+    return true;
+}
+
 
 int main()
 {
-    int n;
-    long factorial = 1.0;
+   long factorial = 1.0;
+  
 
-    cout << "Ingresa el numero para su factorial: ";
-    cin >> n;
+   string str;
 
-    if (n < 0){
-       
-        cout << "Error! Factorial of a negative number doesn't exist.";
-    }
+  cout<<("Ingresa el numero que quieras el factorial \n");
+  cin>>str;
+  
 
-    else {
-        for(int i = 1; i <= n; ++i) {
-            factorial *= i;
-        }
-        cout << "El factorial de " << n << " es " << factorial; 
-        
-          
-    }
+/*
 
-    
- 
-    return 0;
+
+  bool flag = false;
+  for (int i = 0; i < a.size; i++)
+  {
+    flag += ((a[i] - "0")<0 || (a[i] - "0")>9);
+  }
+
+*/
+
+
+
+  int n = stoi(str);
+
+
+if (isNumber(str)){
+   for(int i = 1; i <= n; ++i) {
+  factorial *= i;}
+  cout << "El factorial de " << n << " es " << factorial;
+}
+
+else {
+  cout << "Error";
+} 
+
+return 0;
 }
