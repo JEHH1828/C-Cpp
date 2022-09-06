@@ -1,4 +1,4 @@
-//Hernández Huerta José Emilio  IMC12
+//Hernández Huerta José Emilio  1MC12
 //Fundamentos de Programación
 
 #include <iostream>
